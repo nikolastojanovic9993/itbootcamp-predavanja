@@ -1,0 +1,32 @@
+#naslov1 {
+    text-align: center;
+    color: red;
+}
+
+body {
+    background-color: rgb(235, 235, 149);
+}
+
+img {
+    width: 60%;
+    border: double blue 5px;
+}
+
+.jedan {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+#dva {
+    color: rgb(0, 160, 253);
+    font-size: 20px;
+}
+
+#link2 {
+    color: red;
+}
+
+#link2:hover {
+    color:green;
+}

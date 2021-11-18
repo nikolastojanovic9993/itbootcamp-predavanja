@@ -1,0 +1,105 @@
+body {
+    background-color: #A8E8CA;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #001F3D;
+    background-color: honeydew;
+    margin-bottom: 5px;
+}
+
+#podnaslov {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #001F3D;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: honeydew;
+    margin-top: 0px;
+}
+
+#prvi_pasus {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: 2px solid;
+    padding: 5px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#div1 {
+    background-color: honeydew;
+    width: 100%;
+    padding: 15px;
+}
+
+#slika_hike {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 50px;
+}
+
+#yt {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 100px;
+  } 
+
+.podnaslovi {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #001F3D; 
+    text-align: center;
+  }
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px; 
+    margin-bottom: 15px; 
+    margin-top: 15px;
+    color: #001F3D;
+  }
+
+#input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px; 
+    margin-bottom: 15px; 
+    margin-top: 15px;
+    color: #001F3D;
+   text-align: center;  
+  }
+  
+#forma {
+      text-align: center;
+  }
+
+#footer {
+      text-align: center;
+      margin-bottom: 0px;
+  }
+
+#footer2 {
+      text-align: center;
+      margin: 0px;
+  }
+
+a {
+    color: red;
+} 
+
+a:visited {
+    color: green;
+}
+a:hover {
+    color: yellow;
+}
+a:active
+{
+    color: green;
+}
