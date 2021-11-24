@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.topbar {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+}
+.topbar ul li {
+    background-color: #303030;
+    float: left;
+    width: 25%;
+    list-style-type:none;
+    text-align: center;
+    padding: 0;
+}
+.topbar ul li a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.topbar ul {
+    padding: 0;
+}
+
+.topbar ul li:hover {
+    background-color: #FF0000;
+    color: black;
+}
+.topbar ul li a:hover {
+    color: black;
+}
+.topbar ul li:hover a {
+    color: black;
+}
