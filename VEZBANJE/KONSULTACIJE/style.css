@@ -1,0 +1,25 @@
+#div1 {
+    background-color: chocolate;
+    width: 250px;
+    height: 250px;
+    /* position: relative (relativno na poziciju koju inace ima) */
+    /* position: relative;
+    left: 50px; */
+    /* position: absolute (pozicionira se u odnosu na prvog parent elementa koji ima podesenu poziciju */
+    /* position: fixed (fiksno u odnosu na bilo koje dimenzije browsera) */
+    /* position: static (kao da nisi ni stavio) */
+    position: fixed;
+    top: 10%;
+    left: 200px;
+}
+
+#div1 p {
+    position:absolute;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 2000px;
+}
+/* Z index je vrednost na z osi */

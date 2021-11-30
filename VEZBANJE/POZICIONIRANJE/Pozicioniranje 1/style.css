@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+div {
+    width: 200px;
+    height: 400px;
+    border: 2px solid black;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+div h1:nth-child(2) {
+    color: red;
+    float: left;
+}
+div h1:nth-child(1) {
+    float: left;
+}
+img {
+    width: 198px;
+}
+p {
+    display: block;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    overflow: scroll;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+}
+h2 {
+    position: absolute;
+    bottom: 150px;
+}

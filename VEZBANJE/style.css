@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.div1 {
+    background-color: aqua;
+}
+.div2 {
+    background-color: blanchedalmond;
+}
+.div3 {
+    background-color: yellow;
+}
+.div4 {
+    background-color: tomato;
+}
+.div5 {
+    background-color: blue;
+}
+.div6 {
+    background-color: green;
+}
+div {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+.div1, .div2, .div3 {
+    float: left;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
