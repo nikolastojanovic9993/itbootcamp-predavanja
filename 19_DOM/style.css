@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+}
+
+.error {
+    color: red;
+    border: solid 1px red;
+ }
+ .success {
+    color: green;
+    border: solid 1px green;
+ }
+ 

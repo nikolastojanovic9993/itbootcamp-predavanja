@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+#lista {
+    list-style-type: none;
+}
+.listItem {
+    display: block;
+    position: relative;
+    left: 20px;
+    top: 15px;
+    background-color: aquamarine;
+    width: 100px;
+    height: 30px;
+    padding-top: 10px;
+    border: black 1px solid;
+    margin-top: 10px;
+}
+
+.listItem:hover {
+    background-color: aqua;
+}
+
+#naslov {
+    margin-top: 30px;
+}
+
+
+/* Klasa za ako radis preko toggle */
+.lineThrough {
+    text-decoration: line-through;
+}
+

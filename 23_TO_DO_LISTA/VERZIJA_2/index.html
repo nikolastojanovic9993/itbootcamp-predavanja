@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do Lista2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h2 id="naslov">Moj podsetnik</h2>
+        <ul id="lista">
+            <li class="listItem">Završi projekat</li>
+            <li class="listItem">Kupi lekove</li>
+            <li class="listItem">Plati račune</li>
+        </ul>
+        <div id="forma">
+            <input type="text" id="input" placeholder="Unesite obavezu"><br>
+            <!-- Dok mi je bilo sve u formi nije htelo na enter, pa sam formu prebACIO U DIV I RADI -->
+            <!-- <button type="submit" id="dugme">Dodaj</button> -->
+
+            <input type="radio" name="radio" id="IDpocetak" class="radio" value="pocetak" checked>Dodaj na početak
+            <input type="radio" name="radio" id="IDkraj" class="radio" value="kraj">Dodaj na kraj
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

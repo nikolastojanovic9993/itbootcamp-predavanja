@@ -1,0 +1,38 @@
+[
+    {
+        "imePrezime": "Igrac1",
+        "visina": 202,
+        "timovi": [
+            "Tim1",
+            "Tim2",
+            "Lakers"
+        ]
+    },
+    {
+        "imePrezime": "Igrac2",
+        "visina": 212,
+        "timovi": [
+            "Tim2",
+            "Tim3"
+        ]
+    },
+    {
+        "imePrezime": "Igrac3",
+        "visina": 198,
+        "timovi": [
+            "Tim3",
+            "Tim2",
+            "Lakers"
+        ]
+    },
+    {
+        "imePrezime": "Igrac4",
+        "visina": 200,
+        "timovi": [
+            "Tim3",
+            "Tim2",
+            "Lakers",
+            "Zdravlje"
+        ]
+    }
+]

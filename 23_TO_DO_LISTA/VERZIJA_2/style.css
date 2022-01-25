@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+#lista {
+    list-style-type: none;
+}
+.listItem {
+    display: block;
+    position: relative;
+    left: 20px;
+    top: 15px;
+    background-color: aquamarine;
+    width: 200px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border: black 1px solid;
+    margin-top: 10px;
+}
+
+.listItem:hover {
+    background-color: aqua;
+}
+
+#naslov {
+    margin-top: 30px;
+}
+
+#forma {
+    position: relative;
+    margin-top: 40px;
+}
+
+#input {
+    width: 200px;
+    position: relative;
+    left: 20px;
+    height: 30px;
+}
+
+#dugme {
+    display: block;
+    position: relative;
+    left: 20px;
+    width: 200px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: azure;
+}
+
+#dugme:hover {
+    background-color: cadetblue;
+}
+
+/* .radio {
+    position:relative
+    
+} */
+/* #container {
+    width: 200px;
+} */
