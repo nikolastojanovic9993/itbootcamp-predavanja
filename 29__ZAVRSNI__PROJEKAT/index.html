@@ -29,8 +29,29 @@
     </form>
     <form action="" id="inputUserForm">
         <input type="text" id="inputUser" placeholder="Update username">
-        <input type="submit" value="Send" class ="button"
+        <input type="submit" value="Send" class ="button">
     </form>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCghbvC8wEbvr1ge-s2U8HscQJungtqWNU",
+            authDomain: "nikolas-project-d3759.firebaseapp.com",
+            projectId: "nikolas-project-d3759",
+            storageBucket: "nikolas-project-d3759.appspot.com",
+            messagingSenderId: "564835371549",
+            appId: "1:564835371549:web:29ec01b264b21dd85294f4",
+            measurementId: "G-27MWB5TNB1"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+    </script>
 </body>
 
 </html>

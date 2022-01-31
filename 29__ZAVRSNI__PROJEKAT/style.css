@@ -13,4 +13,23 @@ header {
 }
 .button {
     width: 150px;
+    height: 30px;
+    font-size: 15px;
+    background-color: rgb(101, 180, 255);
+    
+
+}
+.button:hover {
+    color: white;
+
+}
+#inputMsg, #inputUser {
+    height: 30px;
+}
+#inputMsgForm {
+    margin-top: 30px;
+}
+form {
+    text-align: center;
+    margin: 10px;
 }
