@@ -24,12 +24,29 @@ class Chatroom {
         return this._username;
     }
 
+    //Kreiranje asinhronog metoda addChat za dodavanje nove poruke
+    async addChat(msg) {
+
+
+        //db.collection('chats')
+
+        //Kreiranje dokumenta/objekta kojeg prosledjujem bazi podataka
+        let docChat = {
+            message: msg,
+            username: this.username,
+            room: this.room,
+            created_at: firebase.firestore.Timestamp.fromDate(new Date())
+        };
+
+        //Da sacuvam dokument u db
+        let response = await this.chats.add(docChat);
+        return response; //Vracam Promise i mogu za njega da kazem .then i .catch
+
+    }
+
+
 }
 
-let chatroom1 = new Chatroom("js", "nikola");
-console.log(chatroom1.username, chatroom1.room); // Testiram getere
-chatroom1._username = "nikola993"; // Testiram seter za username
-console.log(chatroom1.username);
-chatroom1.room = "general"; //Testiram seter za room
-console.log(chatroom1.room);
+export default Chatroom;
+
 
