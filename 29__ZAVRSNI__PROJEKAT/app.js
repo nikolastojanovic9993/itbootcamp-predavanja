@@ -19,6 +19,7 @@ let chatroom2 = new Chatroom("general", "Milena");
 //         console.log(err);
 //     })
 
+//Ispis dokumenta iz db u konzoli
 chatroom2.getChats(d => {
     console.log(d);
 });
@@ -39,7 +40,11 @@ console.log(chatroom2.room);
 //         console.log(err);
 //     })
 
-let lista = document.getElementById('ispis');
-let c1 = new ChatUI(lista);
-console.log(c1);
+let lista = document.querySelector('ul');
+let chatUI1 = new ChatUI(lista);
 
+
+//Ispis dokumenata iz db na stranici
+chatroom2.getChats(d => {
+    chatUI1.templateLI(d);
+});
