@@ -39,6 +39,9 @@ body {
     color: green;
     font-family: "Comic Sans MS", "Comic Sans", cursive;                
 }
+#naslov3:active {
+    color:aqua;
+}
 
 a:visited {
     color: green;
@@ -48,5 +51,5 @@ a:hover {
 }
 a:active
 {
-    color: green;
+    color: red;
 }
