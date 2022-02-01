@@ -47,24 +47,24 @@ class Chatroom {
     //Metod koji prati promene u bazi i vraca poruke
     getChats(callback) {
         this.chats.where("room", "==", this.room)
-        this.chats.orderBy("created_at").onSnapshot(snapshot => {
-            snapshot.docChanges().forEach(change => {
+            .orderBy("created_at").onSnapshot(snapshot => {
+                snapshot.docChanges().forEach(change => {
 
-                //Kada se desila promena u bazi ispisati "Promena u bazi"
-                // console.log(change.type);
-                // if (change.type == "added") {
-                //     console.log("Promena u bazi");
-                // }
+                    //Kada se desila promena u bazi ispisati "Promena u bazi"
+                    // console.log(change.type);
+                    // if (change.type == "added") {
+                    //     console.log("Promena u bazi");
+                    // }
 
-                // Ispisati dokumente koji su dodati u bazu
-                if (change.type == "added") {
+                    // Ispisati dokumente koji su dodati u bazu
+                    if (change.type == "added") {
 
-                    //console.log(change.doc.data())
-                    callback(change.doc.data());//prosledjivanje dokumenta na ispis (ispis realizujemo kada realizujemo callback)
+                        //console.log(change.doc.data())
+                        callback(change.doc.data());//prosledjivanje dokumenta na ispis (ispis realizujemo kada realizujemo callback)
 
-                }
+                    }
+                });
             });
-        });
     }
 }
 

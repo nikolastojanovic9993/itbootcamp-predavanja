@@ -1,4 +1,5 @@
 import Chatroom from "./chat.js";
+import { ChatUI } from "./ui.js";
 
 let chatroom1 = new Chatroom("homeworks", "nikola");
 console.log(chatroom1.username, chatroom1.room); // Testiram getere
@@ -10,7 +11,7 @@ chatroom1.room = "js";
 // chatroom1.addChat("hello!");
 
 let chatroom2 = new Chatroom("general", "Milena");
-// chatroom2.addChat("Posaljite CV")
+// chatroom2.addChat("Motivaciono pismo")
 //     .then(() => {
 //         console.log("Uspesno dodat čet");
 //     })
@@ -21,15 +22,24 @@ let chatroom2 = new Chatroom("general", "Milena");
 chatroom2.getChats(d => {
     console.log(d);
 });
-let chatroom3 = new Chatroom("general", "Marko");
-chatroom3.addChat("Zavrsio domaci")
-    .then(() => {
-        console.log("Uspesno dodat čet");
-    })
-    .catch(err => {
-        console.log(err);
-    })
+console.log(chatroom2.room);
+// let chatroom3 = new Chatroom("general", "Marko");
+// chatroom3.addChat("Zavrsio domaci")
+//     .then(() => {
+//         console.log("Uspesno dodat čet");
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     })
+// chatroom1.addChat("Caoo")
+//     .then(() => {
+//         console.log("Uspesno dodat čet");
+//     })
+//     .catch(err => {
+//         console.log(err);
+//     })
 
-let
-
+let lista = document.getElementById('ispis');
+let c1 = new ChatUI(lista);
+console.log(c1);
 
