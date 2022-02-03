@@ -13,11 +13,11 @@ let chatroom = new Chatroom("general", "Nikola");
 let chatUI = new ChatUI(lista);
 
 // Postavljanje vrednosti u Local Storage
-// localStorage.setItem("nazivPromenljive", 5);
-// localStorage.setItem("nazivPromenljive", 6);
-// localStorage.setItem("nazivPromenljive", "Test string");
+localStorage.setItem("nazivPromenljive", 5);
+localStorage.setItem("nazivPromenljive", 6);
+localStorage.setItem("nazivPromenljive", "Test string");
 localStorage.setItem("x", 7);
-// localStorage.setItem("y", 10);
+localStorage.setItem("y", 10);
 
 // Uzimanje vrednosti iz Local Storage-a
 let z = localStorage.x + localStorage.y;
