@@ -48,3 +48,32 @@ let chatUI1 = new ChatUI(lista);
 chatroom2.getChats(d => {
     chatUI1.templateLI(d);
 });
+
+
+//Kada se klikne na dugme Send/Pošalji realizovati da se pošalje poruka koja je napisana u input polju
+let btnMsg = document.getElementById("btnMsg");
+btnMsg.addEventListener("click", (e) => {
+    e.preventDefault();
+    let inputMsg = document.getElementById("inputMsg");
+    let inputMsgValue = inputMsg.value;
+    //Poslatu poruku treba dodati u bazu podataka
+    //Poslata poruka treba da bude vidljiva na <ul> na stranici
+    chatroom2.addChat(inputMsgValue)
+        .then(() => {
+            inputMsg.value = "";
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+
+
+//Kada se klikne na dugme Update realizovati da se promeni korisničko ime korisnika koji šalje poruku
+let btnUser = document.getElementById("btnUser");
+btnUser.addEventListener("click", e => {
+    e.preventDefault();
+    let inputUser = document.getElementById("inputUser");
+    let inputUserValue = inputUser.value;
+    chatroom2.username = inputUserValue;
+    inputUser.value = "";
+})

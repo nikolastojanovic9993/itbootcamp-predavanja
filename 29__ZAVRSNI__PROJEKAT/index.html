@@ -12,27 +12,30 @@
 <body>
     <header>
         <h1>ITBootcamp Chat</h1>
-        <h4>Choose a chatroom</h4>
+        <h3>Choose a chatroom</h3>
+
+        <div id="buttons">
+            <button class="button" id="btnGeneral">#general</button>
+            <button class="button" id="btnJs">#js</button>
+            <button class="button" id="btnHomeworks">#homeworks</button>
+            <button class="button" id="btnTests">#tests</button>
+        </div>
     </header>
-    <div id="buttons">
-        <button class="button" id="btnGeneral">#general</button>
-        <button class="button" id="btnJs">#js</button>
-        <button class="button" id="btnHomeworks">#homeworks</button>
-        <button class="button" id="btnTests">#tests</button>
-    </div>
-    <section>
+    <section id="sectionIspis">
         <ul id="ispis">
 
         </ul>
     </section>
+    <section id="sectionForm">
     <form action="" id="inputMsgForm">
         <input type="text" id="inputMsg" placeholder="Your message...">
-        <input type="submit" value="Send" class="button">
+        <input type="submit" value="Send" id="btnMsg">
     </form>
     <form action="" id="inputUserForm">
         <input type="text" id="inputUser" placeholder="Update username">
-        <input type="submit" value="Send" class="button">
+        <input type="submit" value="Send" class="button" id="btnUser">
     </form>
+</section>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->

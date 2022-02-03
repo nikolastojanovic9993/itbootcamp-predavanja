@@ -17,13 +17,29 @@ class Chatroom {
 
     //Seter i geter za polje username
     set username(u) {
-        this._username = u;
+        let u1 = u.trim();
+        if(u1.length < 2 || u1.length > 10) {
+            alert("Ne valja!!")
+        }
+        else {
+        this._username = u1;
+        }
     }
 
     get username() {
         return this._username;
     }
 
+    //Kreiranje usernameUpdate metoda
+    usernameUpdate(username) {
+        let u1 = u.trim();
+        if(u1.length < 2 || u1.length > 10) {
+            alert("Ne valja!!")
+        }
+        else {
+        this._username = u1;
+        }
+    }
     //Kreiranje asinhronog metoda addChat za dodavanje nove poruke
     async addChat(msg) {
 
