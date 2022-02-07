@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,300;0,400;0,900;1,700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,7 +11,7 @@ body {
 header {
     text-align: center;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 70px;
     background-color: #702DA1;
     width: 50%;
     height: 130px;
@@ -17,16 +19,58 @@ header {
 h1 {
     padding-top: 10px;
     color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 h3 {
     padding-top: 15px;
     color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+li {
+    background-color: #702DA1;
+    width: 60%;
+    margin-bottom: 10px;
+    color: white;
+    float: left;
+    display: block !important;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px 10px 10px 0;
+}
+li img {
+    height: 20px;
+    cursor: pointer;
+}
+form {
+    text-align: center;
+    /* margin: 10px; */
+}
+ul {
+    text-align: center;
+}
+.right {
+    /* display: flex;
+    justify-content: flex-end; */
+    /* position: absolute; */
+    /* display: flex;
+    flex-direction: row-reverse; */
+    float: right;
+    display: block;
+    background-color: #E7E8EC;
+    color: black;
+    border-radius: 10px 10px 0 10px;
+
+}
+.row {
+    width: 100%;
+    overflow: hidden;
 }
 #buttons {
     text-align: center;
 }
 .button {
-    width: 120px;
+    width: 20%;
     height: 30px;
     font-size: 15px;
     background-color: #702DA1;
@@ -35,6 +79,8 @@ h3 {
     border-radius: 15px;
     color: #ffffff;
     margin: 10px 5px 0 5px;
+    transition-duration: 0.4s;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .button:hover {
@@ -43,36 +89,116 @@ h3 {
     cursor: pointer;
     border: 2px solid #421665;
 }
+.button:focus {
+    color: #421665;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 2px solid #421665;
+}
+.active {
+    color: #421665;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 2px solid #421665;
+}
+#btnMsg {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    background-color: #75DA4F;
+    color: #F6F6F6;
+    margin-left: 10px;
+}
+#btnMsg:hover {
+    font-size: 25px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
 #sectionIspis {
     width: 50%;
-    height: 70vh;
+    height: 50vh;
     padding:10px;
     margin: auto;
     background-color: #F6F6F6;
     overflow-y: scroll;
 }
 #sectionForm {
-    background-color: #F6F6F6;
+    background-color: #E7E8EC;
     width: 50%;
     margin: auto;
     padding: 10px;
+    text-align: center;
 }
-#inputMsg, #inputUser {
+#inputMsg, #inputUser, #inputColor {
     height: 30px;
 }
 #inputMsg {
     height: 50px;
-    width: 300px;
+    width: 50%;
+    margin: 0px;
 }
 #inputMsg::placeholder {
     padding-left: 30px;
-  }
-
-
-form {
-    text-align: center;
-    /* margin: 10px; */
 }
-ul {
-    text-align: center;
+#inputMsgForm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+#inputColor {
+    width: 200px;
+}
+#inputUser {
+    width: 200px;
+}
+
+
+/* ZA MOBILNE UREDJAJE */
+@media only screen and (max-width: 770px) {
+    [class*="col-"] {
+        width: 100% !important;
+    }
+}
+
+/* ZA DESKTOP UREDJAJE */
+@media only screen and (min-width: 601px) {
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
 }

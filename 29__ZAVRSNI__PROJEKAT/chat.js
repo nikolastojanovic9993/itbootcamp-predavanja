@@ -3,6 +3,7 @@ class Chatroom {
         this.room = r;
         this.username = u;
         this.chats = db.collection('chats');
+        this.unsub = false; // Odredili smo da false bude kao signal da je stranica prvi put ucitana
     }
 
     //Seter i geter za polje room
@@ -17,28 +18,36 @@ class Chatroom {
 
     //Seter i geter za polje username
     set username(u) {
-        let u1 = u.trim();
-        if(u1.length < 2 || u1.length > 10) {
-            alert("Ne valja!!")
-        }
-        else {
-        this._username = u1;
-        }
+        this._username = u;
     }
 
     get username() {
         return this._username;
     }
 
+    //Update room
+    updateRoom(ur) {
+        this.room = ur;
+        //if(this.unsub =! false) isto je if(this.unsub =! true) isto je if(this.unsub) )
+        if(this.unsub != false) { //unsub vise nije false nego je u getChats postalo funkcija
+            this.unsub(); // unsub je sada funkcija i pozivam je sa ()
+
+        }
+        
+    }
+
     //Kreiranje usernameUpdate metoda
-    usernameUpdate(username) {
+    usernameUpdate(u) {
         let u1 = u.trim();
-        if(u1.length < 2 || u1.length > 10) {
-            alert("Ne valja!!")
+        if (u1.length < 2 || u1.length > 10) {
+            alert("Username must contain 2 characters at least!")
         }
         else {
-        this._username = u1;
+            this._username = u1;
+            localStorage.setItem("username", u1);
+
         }
+        
     }
     //Kreiranje asinhronog metoda addChat za dodavanje nove poruke
     async addChat(msg) {
@@ -62,8 +71,10 @@ class Chatroom {
 
     //Metod koji prati promene u bazi i vraca poruke
     getChats(callback) {
-        this.chats.where("room", "==", this.room)
-            .orderBy("created_at").onSnapshot(snapshot => {
+         this.unsub = this.chats
+        .where("room", "==", this.room)
+            .orderBy("created_at")
+            .onSnapshot(snapshot => {
                 snapshot.docChanges().forEach(change => {
 
                     //Kada se desila promena u bazi ispisati "Promena u bazi"
@@ -76,13 +87,26 @@ class Chatroom {
                     if (change.type == "added") {
 
                         //console.log(change.doc.data())
-                        callback(change.doc.data());//prosledjivanje dokumenta na ispis (ispis realizujemo kada realizujemo callback)
+                        callback(change.doc);//prosledjivanje dokumenta na ispis (ispis realizujemo kada realizujemo callback)
 
                     }
                 });
             });
     }
+    deleteMsg (id) {
+        this.chats
+        .doc(id)
+        .delete()
+        .then(()=>{
+            
+        })
+        .catch(err => {
+            console.log(err);
+        }); 
+    }
 }
+
+
 
 export default Chatroom;
 

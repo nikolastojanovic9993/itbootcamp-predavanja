@@ -10,31 +10,42 @@
 </head>
 
 <body>
-    <header>
-        <h1>ITBootcamp Chat</h1>
-        <h3>Choose a chatroom</h3>
+    <header class="col-6">
+        <h1 class="col-12">ITBootcamp Chat</h1>
+        <h3 class = "col-12">Choose a chatroom</h3>
 
         <div id="buttons">
-            <button class="button" id="btnGeneral">#general</button>
-            <button class="button" id="btnJs">#js</button>
-            <button class="button" id="btnHomeworks">#homeworks</button>
-            <button class="button" id="btnTests">#tests</button>
+            <button class="button" id="general" class="col-3">#general</button>
+            <button class="button" id="js" class="col-3">#js</button>
+            <button class="button" id="homeworks" class="col-3">#homeworks</button>
+            <button class="button" id="tests" class="col-3">#tests</button>
         </div>
     </header>
-    <section id="sectionIspis">
+    <section id="sectionIspis" class="col-12">
         <ul id="ispis">
 
         </ul>
     </section>
-    <section id="sectionForm">
+    <section id="sectionForm" class="col-12">
     <form action="" id="inputMsgForm">
-        <input type="text" id="inputMsg" placeholder="Your message...">
-        <input type="submit" value="Send" id="btnMsg">
+        <textarea id="inputMsg" placeholder="Your message..."></textarea>
+        <button type="submit" value="Send" id="btnMsg"><i class="fas fa-paper-plane"></i></button>
     </form>
-    <form action="" id="inputUserForm">
+    <form action="" id="inputUserForm" class="col-12">
         <input type="text" id="inputUser" placeholder="Update username">
         <input type="submit" value="Send" class="button" id="btnUser">
     </form>
+    <p id="userNotification"></p>
+    <form action="" id="inputColorForm">
+        <input type="color" name="" id="inputColor" value="#ffffff">
+        <input type="submit" value="Update" class="button" id="btnColor">
+    </form>
+    <form>
+        <input type="datetime-local" name="" id="inputDate1">
+        <input type="datetime-local" name="" id="inputDate2">
+        <input type="submit" value="Set dates" class="button" id="btnDate">
+    </form>
+    
 </section>
 
 
@@ -58,6 +69,7 @@
         let db = firebase.firestore();
     </script>
     <script src="app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/54dd018b12.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
